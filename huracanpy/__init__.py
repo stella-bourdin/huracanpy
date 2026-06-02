@@ -4,6 +4,7 @@ huracanpy - A python package for working with various forms of feature tracking 
 
 __all__ = [
     # Modules
+    "convert",
     "calc",
     "plot",
     "assess",
@@ -38,6 +39,7 @@ __all__ = [
     "_accessor",
 ]
 
+from . import convert, calc, assess, info, tc, plot
 from ._data import (
     load,
     save,
@@ -63,6 +65,5 @@ from ._basins import basins
 from ._interp import interp_time
 from ._concat import concat_tracks
 from ._subset import sel_id, trackswhere
-from . import calc, plot, assess, info, tc
 
 from . import _accessor
