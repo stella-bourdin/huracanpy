@@ -61,9 +61,6 @@ docs = [
 requires = ["setuptools>=61.0"]
 build-backend = "setuptools.build_meta"
 
-[tool.setuptools]
-packages = ["huracanpy"]
-
 [tool.setuptools.package-data]
 huracanpy = ["_data/example_data/*", "_data/_ibtracs_files/*"]
 
