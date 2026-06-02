@@ -4,12 +4,12 @@ huracanpy - A python package for working with various forms of feature tracking 
 
 __all__ = [
     # Modules
+    "convert",
     "calc",
     "plot",
     "assess",
     "info",
     "tc",
-    "convert",
     # Functions
     "load",
     "save",
