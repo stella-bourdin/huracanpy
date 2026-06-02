@@ -48,7 +48,8 @@ def test_ace(tracks_csv, threshold, sum_by, result):
         # Recreating an equivalent polynomial fit with sklearn gives the same answer
         (
             make_pipeline(
-                PolynomialFeatures(degree=2, include_bias=False), LinearRegression()
+                PolynomialFeatures(degree=2, include_bias=False),
+                LinearRegression(tol=0.0),
             ),
             None,
             None,
