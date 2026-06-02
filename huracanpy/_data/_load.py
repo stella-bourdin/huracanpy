@@ -8,6 +8,7 @@ from dateutil.parser import parse
 from pandas.errors import OutOfBoundsDatetime
 
 from .._concat import concat_tracks
+from ..info import inferred_track_id
 from .._util import combine_kws
 from . import (
     _csv,
@@ -327,7 +328,7 @@ def load(
         tracks["lon"] = ((tracks.lon - baselon) % 360) + baselon
 
     if infer_track_id is not None:
-        tracks = tracks.hrcn.add_inferred_track_id(*infer_track_id)
+        tracks["track_id"] = inferred_track_id(*[tracks[var] for var in infer_track_id])
 
     tracks.track_id.attrs["cf_role"] = "trajectory_id"
 
