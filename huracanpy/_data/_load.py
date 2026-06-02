@@ -8,8 +8,8 @@ from dateutil.parser import parse
 from pandas.errors import OutOfBoundsDatetime
 
 from .._concat import concat_tracks
-from ..info import inferred_track_id
 from .._util import combine_kws
+from ..info import inferred_track_id
 from . import (
     _csv,
     _netcdf,
